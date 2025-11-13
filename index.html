@@ -5,20 +5,31 @@
 <link rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-<title>For Y bro</title>
+<title>good</title>
 <head>
   <meta charset="UTF-8">
   <title>影片範例</title>
   <style>
     body {
       margin: 0;
-      background-color: black;
+      background-color: #000000;
       height: 100dvh;
       width: 100vw;
       overflow: hidden;
       justify-content: center;
       align-items: center;
     }
+    @media (min-width: 800px) {
+      body {
+        overflow: hidden;
+        background-color: #000000;
+      }
+    .all {
+        display: none;
+      }
+    }
+
+    @media (max-width: 800px){
     .all {
       width: 100vw;
       height: 100dvh;
@@ -50,10 +61,10 @@
       height: 101%;
       justify-content: center;
       align-items: center;
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-family: "Merriweather", serif;
       color: rgb(7, 24, 255);
-      background-color: black;
+      background-color: #BBBBBB;
       z-index: 2;
       /* opacity: 0; */
     }
@@ -86,17 +97,21 @@
       position: relative;
       justify-content: center;
       align-items: center;
-      background-color: rgb(85, 85, 85);
+      background-color: #1E1F20;
       border-radius: 5rem;
       margin: 1rem 1rem 1rem 1rem;
     }
     .controls button {
       transform: scale(1.5);
-      background-color: rgb(208, 208, 208);
+      background-color: #FF0004;
       border-radius: 10rem;
       padding: 0.4rem 0.7rem;
       border: none;
     }
+    .controls button span {
+      color: #FFFFFF;
+    }
+}
   </style>
 </head>
 <body>
@@ -112,7 +127,7 @@
         <div class="name"><p>OPQ</p></div>
     </div>
     <div class="go">
-        <video  id="myVideo" loop playsinline>
+        <video  id="myVideo" loop>
             <source src="repeat.mp4" type="video/mp4">
             您的瀏覽器不支援影片播放。
         </video>
