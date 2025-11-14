@@ -5,7 +5,7 @@
 <link rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-<title>opq-ash-tray</title>
+<title>good</title>
 <head>
   <meta charset="UTF-8">
   <title>影片範例</title>
@@ -38,16 +38,35 @@
       align-items: center;
     }
     .word{
+        display: flex;
+        position: relative;
         width: 90%;
         height: 10%;
         display: flex;
         color: white;
       align-items: center;
-      justify-content: space-between;
+      justify-content: start;
+      gap: 7px;
+    }
+    .word p{
+        display: flex;
+        position: relative;
+        height: 80%;
+        font-size: 20px;
+        align-items: end;
+    }
+    .word img{
+        display: flex;
+        position: relative;
+        height: 60%;
+        object-fit: cover;
+        align-items: end;
+        transform-origin: left;
+        transform: translateY(40%) scale(0.4);
     }
     .videogo {
       width: 90%;
-      height: 75%;
+      height: 73%;
       display: flex;
       position: relative;
       justify-content: center;
@@ -55,10 +74,10 @@
       overflow: hidden;
     }
     .cover {
-        display: flex;
+      display: flex;
       position: absolute;
-      width: 101%;
-      height: 101%;
+      width: 100%;
+      height: 100%;
       justify-content: center;
       align-items: center;
       font-size: 3rem;
@@ -77,6 +96,11 @@
         background-color: #fff;
         justify-content: center;
         align-items: center;
+    }
+    .name img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
     .go {
       height: 100%;
@@ -118,13 +142,11 @@
     <div class="all">
         <div class="word">
         <p>opq-ash-tray</p>
-        <div id="soundBtn">
-            <span class="material-symbols-outlined" id="soundIcon">volume_up</span>
-       </div>
+        <img src="tri.png" alt="opq">
     </div>
   <div class="videogo">
     <div class="cover" id="cover">
-        <div class="name"><p>OPQ</p></div>
+        <div class="name"><img src="logo.png" alt="opq"></div>
     </div>
     <div class="go">
         <video  id="myVideo" loop playsinline preload="auto">
@@ -146,14 +168,8 @@
   <script>
   const video = document.getElementById('myVideo');
   const pbtn = document.getElementById('playBtn');
-  const soundBtn = document.getElementById('soundBtn');
-  const soundIcon = document.getElementById('soundIcon');
   const cover = document.getElementById('cover');
 
-    soundBtn.addEventListener('click', () => {
-      video.muted = !video.muted;
-      soundIcon.textContent = video.muted ? 'volume_off' : 'volume_up';
-    });
   pbtn.addEventListener('click', () => {
     if (video.paused) {
       video.play();
@@ -161,5 +177,4 @@
     } 
   });
 </script>
-  
 </body>
